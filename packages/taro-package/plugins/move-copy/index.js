@@ -11,16 +11,16 @@ export default (ctx, options) => {
 
     console.log('编译结束！')
 
-    // const rootPath = path.resolve(__dirname, '../..')
-    // const miniappPath = path.join(rootPath, 'miniapp')
-    // const outputPath = path.resolve(__dirname, '../dist')
-    // const destPath = path.join(miniappPath, 'taro')
+    const rootPath = path.resolve(__dirname, '../..')
+    const miniappPath = path.join(rootPath, '../mini-program')
+    const outputPath = path.resolve(rootPath, './dist')
+    const destPath = path.join(miniappPath, 'taro')
 
-    // if (fs.existsSync(destPath)) {
-    //   fs.removeSync(destPath)
-    // }
-    // fs.copySync(outputPath, destPath)
+    if (fs.existsSync(destPath)) {
+      fs.removeSync(destPath)
+    }
+    fs.copySync(outputPath, destPath)
 
-    console.log('拷贝结束！')
+    console.log('拷贝结束！', rootPath, miniappPath, outputPath, destPath)
   })
 }
