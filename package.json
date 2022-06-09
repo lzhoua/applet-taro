@@ -1,0 +1,13 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:taro": "lerna --scope @applet-taro/taro-package run dev:weapp"
+  },
+  "devDependencies": {
+    "lerna": "^5.0.0"
+  }
+}
